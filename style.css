@@ -418,15 +418,15 @@ section {
   box-sizing: border-box;
 }
 
+/* Swiper Slides */
 .swiper-slide {
   background-color: #bd4a4a;
   border-radius: 16px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   text-align: center;
-  /* padding: 1rem; */
 }
 
-/* Styling for text-content inside slides */
+/* About Section Content */
 .about-content {
   max-width: 800px;
   padding: 2rem;
@@ -443,7 +443,8 @@ section {
   margin-bottom: 1rem;
   color: #222;
 }
-.about-content h2 span{
+
+.about-content h2 span {
   color: #007bff;
 }
 
@@ -453,7 +454,6 @@ section {
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-
 
 .about-details {
   list-style: none;
@@ -471,6 +471,7 @@ section {
   color: #000;
 }
 
+/* Resume Button */
 .resume-btn {
   display: inline-block;
   padding: 0.7rem 1.5rem;
@@ -486,10 +487,11 @@ section {
   background-color: #0056b3;
 }
 
+/* Web Developer / Designer Shared Styling */
 .webDev {
   max-width: 800px;
   padding: 2rem;
-  height:100%;
+  height: 100%;
   background: #fefefe;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
@@ -503,11 +505,11 @@ section {
 }
 
 .webDev h2 span {
-  color: #007bff; /* Style for 'Web' */
+  color: #007bff; /* Highlighted word like 'Web' */
 }
 
 .webDev .highlight {
-  color: #ff6600; /* Style for 'Profile' */
+  color: #ff6600; /* Optional highlight class */
 }
 
 .webDev p {
@@ -515,6 +517,8 @@ section {
   color: #555;
   margin: 0.5rem 0;
 }
+
+/* Skill Icons Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -535,9 +539,10 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
-/* Hover Effect */
+/* Skill Icon Hover Effect */
 .skills-grid img:hover {
   transform: scale(2.15);
   box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
-  /* filter: brightness(1.1) contrast(1.2);  */
+  /* Optional: Add brightness/contrast filter */
+  /* filter: brightness(1.1) contrast(1.2); */
 }
