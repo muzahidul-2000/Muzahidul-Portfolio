@@ -1,4 +1,5 @@
 /* Reset */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,7 @@ body {
 }
 
 /* Navbar */
+/* Navigation Styling */
 nav {
   display: flex;
   justify-content: space-between;
@@ -297,3 +299,247 @@ footer {
     font-size: 1rem;
   }
 }
+/* Section Styling */
+section {
+  min-height: 100vh;
+}
+
+/* Services Section */
+.services-section {
+  display: flex;
+  padding: 0vh 5vw;
+  position: relative;
+  justify-content: center;
+  background-color: aqua;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  max-height: 80vh;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.top-image-container {
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.top-image-container .card-image {
+  width: 150px;
+  height: 150px;
+  margin-left: 10%;
+  border-radius: 50%;
+  border: 4px solid #687cec;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-image-container .card-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 30vw;
+  /* margin-left: 8rem; */
+}
+
+#topCard {
+  padding-top: 11vh;
+}
+
+/* Individual Card */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  padding: 8px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.92rem;
+  color: #555;
+  margin: 0.3rem 0 0;
+}
+
+.card button {
+  background: linear-gradient(90deg, #1542e7, #1521d3);
+  border: none;
+  color: white;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #f37b22, #ff7e5f);
+}
+
+/* Swiper Container */
+.swiper-container {
+  width: 40vw;
+  height: 70vh;
+  box-sizing: border-box;
+}
+
+.swiper-slide {
+  background-color: #bd4a4a;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* padding: 1rem; */
+}
+
+/* Styling for text-content inside slides */
+.about-content {
+  max-width: 800px;
+  padding: 2rem;
+  height: 100%;
+  background: #fefefe;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+.about-content h2 span{
+  color: #007bff;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+
+.about-details {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.about-details li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.about-details strong {
+  color: #000;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #0056b3;
+}
+
+.webDev {
+  max-width: 800px;
+  padding: 2rem;
+  height:100%;
+  background: #fefefe;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: left;
+}
+
+.webDev h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.webDev h2 span {
+  color: #007bff; /* Style for 'Web' */
+}
+
+.webDev .highlight {
+  color: #ff6600; /* Style for 'Profile' */
+}
+
+.webDev p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.skills-grid img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect */
+.skills-grid img:hover {
+  transform: scale(2.15);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+  /* filter: brightness(1.1) contrast(1.2);  */
+}
+
+
