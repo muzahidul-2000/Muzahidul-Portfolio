@@ -2,34 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hackathon Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Classy Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-
   <!-- Navbar -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <div id="nav-logo">
+      <img src="/Hackathon-Portfolio/assetss/porfolio logo.jpg" alt="Portfolio Logo" />
+    </div>
+    <div id="nav-item">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-btn">
+      <a href="resume.pdf" target="_blank">
+        <button>Resume</button>
+      </a>
+    </div>
   </nav>
 
-  <!-- Home Section -->
+  <!-- Hero Section -->
   <section id="home">
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is the home section. Explore more about me, my projects, and how to contact me.</p>
+    <div class="section-1">
+      <div class="sec1-left">
+        <h1>Hello, I'm a Developer.<br> I build web magic.</h1>
+        <p>Custom, elegant and efficient solutions tailored to your needs.</p>
+        <button>Create Schedule</button>
+        <button class="secondary-btn">Watch Videos</button>
+
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank">
+            <img src="/Hackathon-Portfolio/assetss/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="https://github.com" target="_blank">
+            <img src="/Hackathon-Portfolio/assetss/github.svg" alt="GitHub">
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <img src="/Hackathon-Portfolio/assetss/instagram.svg" alt="Instagram">
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="/Hackathon-Portfolio/assetss/facebook.svg" alt="Facebook">
+          </a>
+        </div>
+      </div>
+      <div class="sec1-right">
+        <img src="/Hackathon-Portfolio/assetss/sec1-right image.webp" alt="Profile Image">
+      </div>
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about">
     <h1>About Me</h1>
-    <p>I’m a passionate developer eager to build impactful web applications and solve real-world problems through
-      technology.</p>
+    <p>I’m a passionate developer eager to build impactful web applications and solve real-world problems through technology.</p>
   </section>
 
   <!-- Projects Section -->
@@ -48,7 +81,7 @@
   <footer>
     <p>&copy; 2025 My Portfolio. All rights reserved.</p>
   </footer>
-  <script src="script.js"></script>
+
 </body>
 
 </html>
