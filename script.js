@@ -1,7 +1,7 @@
 // Initialize Swiper with cube effect
 const swiper = new Swiper('.swiper-container', {
   effect: 'cube', // Use cube effect
-  grabCursor: false,
+  grabCursor: true,
   cubeEffect: {
     shadow: true, // Enable shadow
     slideShadows: true, // Enable slide shadows
