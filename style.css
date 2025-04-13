@@ -144,8 +144,7 @@ nav {
 }
 
 #about,
-#contact,
-#projects {
+#contact {
   min-height: 80vh;
   text-align: center;
   justify-content: center;
@@ -497,11 +496,13 @@ footer {
 }
 
 .webDev h2 span {
-  color: #007bff; /* Highlighted word like 'Web' */
+  color: #007bff;
+  /* Highlighted word like 'Web' */
 }
 
 .webDev .highlight {
-  color: #ff6600; /* Optional highlight class */
+  color: #ff6600;
+  /* Optional highlight class */
 }
 
 .webDev p {
@@ -525,7 +526,7 @@ footer {
   height: 70px;
   border-radius: 50%;
   background-color: #fff;
-  padding: 10px;  
+  padding: 10px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
@@ -541,5 +542,8 @@ footer {
 
 .top-image-container {
   position: absolute;
- 
+
 }
+
+/* project-section */
+/* Project Section Inner Navbar */
