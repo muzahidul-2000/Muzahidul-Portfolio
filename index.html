@@ -17,7 +17,7 @@
   <!-- Navbar -->
   <nav>
     <div id="nav-logo">
-      <img src="/Hackathon-Portfolio/assetss/porfolio logo.jpg" alt="Portfolio Logo" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Portfolio.hu_full_logo.png" alt="Portfolio Logo" />
     </div>
     <div id="nav-item">
       <a href="#home" class="active">Home</a>
@@ -38,8 +38,8 @@
       <div class="sec1-left">
         <h1>Hello, I'm a Developer.<br> I build web magic.</h1>
         <p>Custom, elegant and efficient solutions tailored to your needs.</p>
-        
-    
+
+
 
         <!-- Social Icons -->
         <div class="social-links">
@@ -63,7 +63,7 @@
       </div>
     </div>
   </section>
-  
+
 
   <!-- About Section -->
   <section id="about">
@@ -211,8 +211,75 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <h1>Contact Me</h1>
-    <p>Feel free to reach out via email at example@example.com or through my social media platforms.</p>
+    <div class="contact-header">
+      <h2>Get in touch</h2>
+      <p>Want to get in touch? We'd love to hear from you. Here's how you can reach us</p>
+    </div>
+
+    <section class="contact-section">
+      <!-- Box 1: Phone and Email -->
+      <div class="contact-box">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#333">
+            <path
+              d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
+          </svg>
+        </div>
+        <h3>Talk to Sales</h3>
+        <p>Interested in our services? Just pick up the phone to chat with a member of our sales team.</p>
+        <div class="contact-info">
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Email:</strong> example@email.com</p>
+        </div>
+      </div>
+
+      <!-- Box 2: Address -->
+      <div class="contact-box">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#333">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+          </svg>
+        </div>
+        <h3>Visit Our Office</h3>
+        <p>We'd love to welcome you to our office and discuss how we can help with your needs.</p>
+        <div class="contact-info">
+          <p><strong>Address:</strong> 123 Street, City, India</p>
+        </div>
+      </div>
+
+      <!-- Box 3: Contact Form Button -->
+      <div class="contact-box">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#333">
+            <path
+              d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+          </svg>
+        </div>
+        <h3>Contact Customer Support</h3>
+        <p>Need help or have questions? Our support team is ready to assist you with any inquiries.</p>
+        <button id="contactBtn" class="contact-button">Connect With Us</button>
+      </div>
+    </section>
+
+    <!-- Contact Modal Popup -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Get in Touch</h3>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="dafa909a-bb8e-4cf7-a2cb-f8956cdf1240" />
+
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    
+
   </section>
 
   <!-- Footer -->
