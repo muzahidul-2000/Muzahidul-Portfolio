@@ -7,7 +7,6 @@
   <title>Modern Classy Portfolio</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -37,8 +36,6 @@
         <h1>Hello, I'm a Developer.<br> I build web magic.</h1>
         <p>Custom, elegant and efficient solutions tailored to your needs.</p>
 
-
-
         <div class="social-links">
           <a href="https://linkedin.com" target="_blank">
             <img src="./assetss/linkedin.svg" alt="LinkedIn">
@@ -61,7 +58,6 @@
     </div>
   </section>
 
-
   <section id="about">
     <section class="services-section">
 
@@ -72,36 +68,28 @@
             alt="Face" class="card-image">
         </div>
         <div class="card card-highlight" id="topCard">
-
           <h3>Web Developer</h3>
           <p>"Passionate Web Developer skilled in creating responsive, user-friendly websites with HTML, CSS,
             JavaScript, and frameworks, delivering seamless web experiences across devices."</p>
           <button id="btn1">Learn More</button>
-
         </div>
-
         <div class="card">
           <h3>Web Designer</h3>
           <p>"Creative Web Designer skilled in using Figma, Adobe XD, Sketch, and InVision to create visually
             appealing, intuitive, and responsive designs for seamless user experiences across devices."</p>
           <button id="btn2">Learn More</button>
-
         </div>
       </div>
-
 
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="about-content">
               <h2><span>About</span> Me</h2>
-              <p>
-                I’m a passionate web developer who loves turning ideas into user-friendly, responsive, and
-                dynamic web
-                experiences.
+              <p>I’m a passionate web developer who loves turning ideas into user-friendly, responsive, and
+                dynamic web experiences.
                 I specialize in front-end development using modern tools and frameworks to build seamless digital
-                interfaces.
-              </p>
+                interfaces.</p>
 
               <ul class="about-details">
                 <li><strong>🎓 Education:</strong> B.Tech in Electronics (VLSI), Jamia Millia Islamia</li>
@@ -112,7 +100,6 @@
 
               <a href="resume.pdf" class="resume-btn" download>📄 Download Resume</a>
             </div>
-
           </div>
 
           <div class="swiper-slide">
@@ -142,10 +129,7 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
                   title="VS Code">
               </div>
-
-
             </div>
-
           </div>
 
           <div class="swiper-slide">
@@ -187,18 +171,145 @@
     </section>
   </section>
 
-
+  <!-- Updated Projects Section -->
   <section id="projects">
-    <div class="project-section">
-
-      <h1>My Projects</h1>
-      <p>Here are some of the projects I've worked on — from simple websites to dynamic web apps.</p>
+    <div>
+        <div class="project-section">
+            <h1>My Projects</h1>
+            <p class="project-para">Here are some of the projects I've worked on — from simple websites to dynamic web apps.</p>
+        </div>
     </div>
-  </section>
+
+    <div class="project-nav">
+        <div id="nav-item">
+            <a href="#Web Development Projects" data-filter="web-development">Web Development Projects</a>
+            <a href="#Web Design Projects" data-filter="web-design">Web Design Projects</a>
+            <a href="#All Projects" data-filter="all">All Projects</a>
+        </div>
+    </div>
+
+    <div class="project-grid">
+        <div class="project-card web-development">
+            <img src="project1-thumbnail.jpg" alt="Project 1 Thumbnail">
+            <h3>E-commerce Website</h3>
+            <p>A fully functional e-commerce platform built with React and Node.js.</p>
+            <div class="project-badges">
+                <span class="badge">React</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express</span>
+            </div>
+            <div class="project-links">
+                <a href="live-site-link" target="_blank">Live Site</a>
+                <a href="github-repo-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card web-development">
+            <img src="project2-thumbnail.jpg" alt="Project 2 Thumbnail">
+            <h3>Weather App</h3>
+            <p>A dynamic weather application using a third-party API.</p>
+            <div class="project-badges">
+                <span class="badge">JavaScript</span>
+                <span class="badge">API</span>
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+            </div>
+            <div class="project-links">
+                <a href="live-site-link" target="_blank">Live Site</a>
+                <a href="github-repo-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card web-design">
+            <img src="design1-thumbnail.jpg" alt="Design 1 Thumbnail">
+            <h3>Landing Page Redesign</h3>
+            <p>Redesigned a landing page for improved user experience.</p>
+            <div class="project-badges">
+                <span class="badge">Figma</span>
+                <span class="badge">UI/UX</span>
+            </div>
+            <div class="project-links">
+                <a href="design-link" target="_blank">Design Link</a>
+            </div>
+        </div>
+
+        <div class="project-card web-design">
+            <img src="design2-thumbnail.jpg" alt="Design 2 Thumbnail">
+            <h3>Mobile App UI</h3>
+            <p>Designed a clean and intuitive mobile app interface.</p>
+            <div class="project-badges">
+                <span class="badge">Adobe XD</span>
+                <span class="badge">Mobile UI</span>
+            </div>
+            <div class="project-links">
+                <a href="design-link" target="_blank">Design Link</a>
+            </div>
+        </div>
+    </div>
+</section>
 
   <section id="contact">
-    <h1>Contact Me</h1>
-    <p>Feel free to reach out via email at example@example.com or through my social media platforms.</p>
+    <div class="contact-header">
+      <h2>Get in touch</h2>
+      <p>Want to get in touch? We'd love to hear from you. Here's how you can reach us</p>
+    </div>
+
+    <section class="contact-section">
+      <div class="contact-box">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#333">
+            <path
+              d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
+          </svg>
+        </div>
+        <h3>Talk to Sales</h3>
+        <p>Interested in our services? Just pick up the phone to chat with a member of our sales team.</p>
+        <div class="contact-info">
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Email:</strong> example@email.com</p>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#333">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+          </svg>
+        </div>
+        <h3>Visit Our Office</h3>
+        <p>We'd love to welcome you to our office and discuss how we can help with your needs.</p>
+        <div class="contact-info">
+          <p><strong>Address:</strong> 123 Street, City, India</p>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#333">
+            <path
+              d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+          </svg>
+        </div>
+        <h3>Contact Customer Support</h3>
+        <p>Need help or have questions? Our support team is ready to assist you with any inquiries.</p>
+        <button id="contactBtn" class="contact-button">Connect With Us</button>
+      </div>
+    </section>
+
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Get in Touch</h3>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="dafa909a-bb8e-4cf7-a2cb-f8956cdf1240" />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -206,7 +317,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js">
+     
+  </script>
 </body>
 
 </html>

@@ -31,3 +31,47 @@ document.getElementById('btn2').addEventListener('click', function () {
 document.getElementById('profileImageTrigger').addEventListener('click', function () {
   swiper.slideTo(0); // Go to intro/about slide
 });
+
+// Using your existing JavaScript as it already handles the modal functionality well
+const contactBtn = document.getElementById("contactBtn");
+const contactModal = document.getElementById("contactModal");
+const closeBtn = document.querySelector(".close-btn");
+
+contactBtn.addEventListener("click", () => {
+  contactModal.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", () => {
+  contactModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === contactModal) {
+    contactModal.style.display = "none";
+  }
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Stop default browser submission
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert("✅ Thank you! Your message was sent successfully.");
+      document.getElementById("contactModal").style.display = "none";
+      form.reset();
+    } else {
+      alert("❌ Submission failed. Please try again.");
+    }
+  })
+  .catch(err => {
+    alert("⚠️ Something went wrong. Check your internet connection.");
+  });
+});
