@@ -8,6 +8,7 @@
   /* background-color: yellow; */
 }
 
+
 :root {
   /* Colors */
   --primary-color: #0f172a;
@@ -38,6 +39,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 999;
+  
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease;
 }
@@ -52,8 +54,8 @@ nav {
 }
 
 #nav-logo img {
-  width: 40px;
-  height: auto;
+  width: 65px;
+  /* height: 80%; */
   transition: transform 0.3s ease;
 }
 
@@ -139,10 +141,10 @@ nav {
   display: flex;
   flex-wrap: wrap;
   background-color: var(--primary-color);
-  gap: 50px;
+  gap: 10px;
   margin-bottom: 5vw;
   align-items: center;
-  padding: 0px 5vw;
+  padding: 0px 10vw;
 }
 
 .sec1-left {
@@ -187,14 +189,11 @@ nav {
 .secondary-btn {
   margin-top: 5%;
   background-color: transparent;
-  border: 2px solid var(--ternary-color);
+  /* border: 2px solid var(--ternary-color); */
   color: var(--ternary-color);
 }
 
-.secondary-btn:hover {
-  background-color: var(--ternary-color);
-  color: var(--secondary-color);
-}
+
 
 .social-links {
   margin-top: 20px;
@@ -236,7 +235,7 @@ nav {
 
 .sec1-right img {
   max-width: 100%;
-  height: auto;
+  height: 70vh;
 }
 
 /* Section Headings */
@@ -464,6 +463,8 @@ footer {
 .webDev h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: black;
+
 }
 
 .webDev h2 span {
