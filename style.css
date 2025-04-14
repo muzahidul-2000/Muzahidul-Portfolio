@@ -39,7 +39,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 999;
-  
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease;
 }
@@ -120,6 +120,7 @@ nav {
 .nav-btn a {
   text-decoration: none;
 }
+
 #home {
   background: none;
 }
@@ -249,15 +250,6 @@ section p {
   font-size: 1rem;
   max-width: 800px;
   color: #cbd5e1;
-}
-
-/* Footer */
-footer {
-  background: var(--primary-color);
-  color: #cbd5e1;
-  text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 50px;
 }
 
 /* Resume Button */
@@ -397,12 +389,14 @@ footer {
 }
 
 /* About Section Content */
-#about{
+#about {
   margin-bottom: 6rem;
 }
-.about-section{
+
+.about-section {
   margin-bottom: 6rem;
 }
+
 .about-content {
   max-width: 800px;
   padding: 2rem;
@@ -412,7 +406,7 @@ footer {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   font-family: 'Segoe UI', sans-serif;
   text-align: left;
-  
+
 }
 
 .about-content h2 {
@@ -791,7 +785,9 @@ footer {
   color: #ccc;
   margin: 0 auto;
   max-width: 800px;
-}.project-nav {
+}
+
+.project-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -938,6 +934,7 @@ footer {
 #popup-close:hover {
   color: var(--ternary-color);
 }
+
 .popup-skills {
   display: flex;
   flex-wrap: wrap;
@@ -959,4 +956,44 @@ footer {
 .popup-skills .skill-icon:hover {
   transform: scale(1.1);
 }
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: #cbd5e1;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin: 50px 0px;
+  height: 250px;
+  width: 100vw;
+
+}
+
+.footer-logo {
+  text-align: center;
+
+}
+
+.footer-logo img {
+  height: 60px;
+  width: 90px;
+}
+
+.footer-links {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0px 0px 20px 0px
+}
+.footer-end{
+margin: 10px;
+}
+
+
+
+
+
+
+
 

@@ -97,37 +97,37 @@ const skillIcons = {
 const projects = [
   {
     category: 'web-development',
-    title: 'E-commerce Website',
+    title: 'Beauty Center Website',
     image: 'https://picsum.photos/id/1015/600/400',
     fullImage: 'https://picsum.photos/id/1015/1200/800',
-    description: 'A fully functional e-commerce platform built using React for the frontend and Node.js with Express for the backend. It features a dynamic product catalog, secure authentication, shopping cart functionality, order tracking, and an intuitive admin dashboard for inventory management.',
+    description: 'A personal portfolio website showcasing projects, skills, and resume with interactive animations and scroll-triggered transitions. Built with HTML, CSS, and JavaScript, it includes smooth navigation, contact form integration, and optimized performance for mobile and desktop.',
     skills: ['React', 'Node.js', 'Express'],
     link: 'https://live-site-link.com'
   },
   {
     category: 'web-development',
-    title: 'Weather App',
+    title: 'Calcify',
     image: 'https://picsum.photos/id/1020/600/400',
     fullImage: 'https://picsum.photos/id/1020/1200/800',
-    description: 'A responsive weather application that fetches real-time weather data using a third-party API. Users can search for any city to get current conditions, a five-day forecast, temperature trends, and other climate insights, all displayed with dynamic icons and charts.',
+    description: 'Comprehensive calculator suite A dynamic calculator suite featuringbasic and advanced calculations, a currency convertor including INR, and a BMI calculator.Experience smooth interactions with cube swiper.js for sleek, interactive design.',
     skills: ['JavaScript', 'API', 'HTML', 'CSS'],
     link: 'https://weather-app.com'
   },
   {
     category: 'web-design',
-    title: 'Landing Page Redesign',
+    title: 'Digital Technology Agency',
     image: 'https://loremflickr.com/600/400/website,design',
     fullImage: 'https://loremflickr.com/1200/800/website,design',
-    description: 'Redesigned the landing page of a SaaS platform to enhance user engagement and reduce bounce rates. The layout was restructured for better readability, faster loading, and visually appealing call-to-actions, based on modern UI/UX principles and A/B testing results.',
+    description: 'This project focuses on delivering a clean design and structured layout to highlight essential information effectively. its a simple yet impactful design that reflects professsionalism.Looking forward to your feedbackand suggestions!',
     skills: ['Figma', 'UI/UX'],
     link: 'https://design-link.com'
   },
   {
     category: 'web-design',
-    title: 'Mobile App UI',
+    title: 'Cafe Crust',
     image: 'https://loremflickr.com/600/400/mobile,app',
     fullImage: 'https://loremflickr.com/1200/800/mobile,app',
-    description: 'Designed an intuitive and minimal mobile application interface for a task management tool. The UI focuses on usability and accessibility, featuring a clean layout, clear typography, gesture-based navigation, and customizable color themes suitable for both iOS and Android platforms.',
+    description: 'I recently built this sleek and interactive website for a fictinal cafe crust using react.js.This project emphasizes modularity and modern design while utilizing arrays to dynamically generate cards for menu items and bakery products.',
     skills: ['Adobe XD', 'Mobile UI'],
     link: 'https://design-link.com'
   },
@@ -136,16 +136,16 @@ const projects = [
     title: 'Portfolio Website',
     image: 'https://picsum.photos/id/1042/600/400',
     fullImage: 'https://picsum.photos/id/1042/1200/800',
-    description: 'A personal portfolio website showcasing projects, skills, and resume with interactive animations and scroll-triggered transitions. Built with HTML, CSS, and JavaScript, it includes smooth navigation, contact form integration, and optimized performance for mobile and desktop.',
+    description: '',
     skills: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://portfolio-site.com'
   },
   {
     category: 'web-development',
-    title: 'Blog CMS',
+    title: '',
     image: 'https://picsum.photos/id/1060/600/400',
     fullImage: 'https://picsum.photos/id/1060/1200/800',
-    description: 'Developed a custom blog content management system from scratch using PHP and MySQL. The platform includes user authentication, rich text editing, comment moderation, post scheduling, and a mobile-first admin dashboard for bloggers to manage and publish content with ease.',
+    description: 'This is my web development project, designed for a beauty center and recently updated with modifications made yesterday.The website is built using HTML, CSS, and Javascript to create an elegant and functional paltform for skincare and facial treatments',
     skills: ['PHP', 'MySQL', 'Bootstrap'],
     link: 'https://blogcms.com'
   },
