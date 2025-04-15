@@ -229,3 +229,7 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
 
 renderProjects(); // initial load
 
+document.querySelector(".hamburger").addEventListener("click", () => {
+  const navItem = document.querySelector("#nav-item");
+  navItem.classList.toggle("active");
+});

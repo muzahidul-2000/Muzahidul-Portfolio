@@ -24,6 +24,7 @@ body {
   color: var(--secondary-color);
   line-height: 1.7;
 }
+
 .custom-shape-divider-bottom-1744720210 {
   position: absolute;
   bottom: 0;
@@ -44,6 +45,7 @@ body {
 .custom-shape-divider-bottom-1744720210 .shape-fill {
   fill: #FFFFFF;
 }
+
 /* Navbar */
 nav {
   display: flex;
@@ -377,7 +379,7 @@ section p {
 
 .card button:hover {
   transform: scale(1.05);
-  background: var(--quaternary-color);  
+  background: var(--quaternary-color);
 }
 
 /* Swiper Container */
@@ -448,6 +450,7 @@ section p {
 .about-details strong {
   color: var(--primary-color);
 }
+
 .resume-btn {
   display: inline-flex;
   align-items: center;
@@ -1016,25 +1019,31 @@ footer {
   background: var(--primary-color);
   color: #cbd5e1;
   text-align: center;
-  padding: 2rem 0; /* Increased padding for better spacing */
+  padding: 2rem 0;
+  /* Increased padding for better spacing */
   margin-top: 50px;
-  height: auto; /* Adjusted to auto for flexibility */
+  height: auto;
+  /* Adjusted to auto for flexibility */
   position: relative;
 }
 
 .footer-logo {
   text-align: center;
-  margin-bottom: 1.5rem; /* Added space below the logo */
+  margin-bottom: 1.5rem;
+  /* Added space below the logo */
 }
 
 .footer-logo img {
   height: 60px;
-  width: auto; /* Adjusted width to auto for aspect ratio consistency */
-  transition: transform 0.3s ease; /* Added smooth hover effect */
+  width: auto;
+  /* Adjusted width to auto for aspect ratio consistency */
+  transition: transform 0.3s ease;
+  /* Added smooth hover effect */
 }
 
 .footer-logo img:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
 }
 
 .footer-links {
@@ -1047,21 +1056,26 @@ footer {
 
 .footer-links a {
   color: #cbd5e1;
-  font-size: 1.1rem; /* Increased font size for better readability */
+  font-size: 1.1rem;
+  /* Increased font size for better readability */
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--ternary-color); /* Color change on hover */
-  transform: translateY(-3px); /* Slight lift effect on hover */
+  color: var(--ternary-color);
+  /* Color change on hover */
+  transform: translateY(-3px);
+  /* Slight lift effect on hover */
 }
 
 .footer-bottom {
   font-size: 0.9rem;
-  color: #a0aec0; /* Lighter color for less prominent text */
+  color: #a0aec0;
+  /* Lighter color for less prominent text */
   margin-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Added top border for separation */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* Added top border for separation */
   padding-top: 1rem;
 }
 
@@ -1077,5 +1091,89 @@ footer {
 
 
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger img {
+  filter: invert(1);
+  /* Invert image for dark mode */
+}
 
 
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+  #nav-item {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #161b22;
+    width: 100%;
+    padding: 20px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 10;
+  }
+
+  .nav-btn {
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #nav-item.active {
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: column-reverse;
+    /* height: 66vh; */
+  }
+
+  .sec1-left {
+    text-align: center;
+  }
+
+  .social-links {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sec1-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .sec1-right {
+    padding: 32px 32px 0px 32px;
+  }
+
+  .sec1-right img {
+    height: 66%;
+    width: 100%;
+  }
+
+  .about-section,
+  .custom-shape-divider-bottom-1744720210 .shape-fill {
+    display: none;
+  }
+
+  #projects {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
