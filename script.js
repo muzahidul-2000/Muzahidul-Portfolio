@@ -142,7 +142,7 @@ const projects = [
   },
   {
     category: 'web-development',
-    title: '',
+    title: 'Portfolio Website',
     image: 'https://picsum.photos/id/1060/600/400',
     fullImage: 'https://picsum.photos/id/1060/1200/800',
     description: 'This is my web development project, designed for a beauty center and recently updated with modifications made yesterday.The website is built using HTML, CSS, and Javascript to create an elegant and functional paltform for skincare and facial treatments',
