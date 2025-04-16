@@ -98,20 +98,30 @@ const projects = [
   {
     category: 'web-development',
     title: 'Beauty Center Website',
-    image: 'https://picsum.photos/id/1015/600/400',
+    image: 'projects/images/parlourHome.jpg',
     fullImage: 'https://picsum.photos/id/1015/1200/800',
-    description: 'A personal portfolio website showcasing projects, skills, and resume with interactive animations and scroll-triggered transitions. Built with HTML, CSS, and JavaScript, it includes smooth navigation, contact form integration, and optimized performance for mobile and desktop.',
+    description: 'My first web development project — a responsive and elegant website for a beauty center — showcases a clean layout tailored for skincare and facial treatment services. Recently enhanced with UI improvements and functional updates, the website is built using HTML, CSS, and JavaScript, focusing on smooth user experience and mobile responsiveness.',
     skills: ['React', 'Node.js', 'Express'],
     link: 'https://live-site-link.com'
   },
+
   {
     category: 'web-development',
-    title: 'Calcify',
+    title: 'Cafe Crust',
     image: 'https://picsum.photos/id/1020/600/400',
     fullImage: 'https://picsum.photos/id/1020/1200/800',
-    description: 'Comprehensive calculator suite A dynamic calculator suite featuringbasic and advanced calculations, a currency convertor including INR, and a BMI calculator.Experience smooth interactions with cube swiper.js for sleek, interactive design.',
+    description: 'Café Crust is a sleek and interactive website I recently developed for a fictional café using React.js. This project highlights modular design principles and leverages dynamic rendering through arrays to showcase menu items and bakery products. With a focus on modern UI/UX, the site delivers a smooth browsing experience, reflecting both aesthetic appeal and functional responsiveness.',
     skills: ['JavaScript', 'API', 'HTML', 'CSS'],
     link: 'https://weather-app.com'
+  },
+  {
+    category: 'web-development',
+    title: 'Digital Technology Website',
+    image: 'https://picsum.photos/id/1042/600/400',
+    fullImage: 'https://picsum.photos/id/1042/1200/800',
+    description: 'Designed and developed a dynamic website for a Digital Technology Agency, focusing on a clean, modern design with a structured layout. The website showcases key information in a user-friendly manner, reflecting the agency’s professionalism and brand identity. With a focus on simplicity and impact, the design ensures easy navigation while maintaining a sleek and professional aesthetic. This project highlights my ability to create effective, responsive websites tailored to client needs.',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://portfolio-site.com'
   },
   {
     category: 'web-design',
@@ -131,24 +141,8 @@ const projects = [
     skills: ['Adobe XD', 'Mobile UI'],
     link: 'https://design-link.com'
   },
-  {
-    category: 'web-development',
-    title: 'Portfolio Website',
-    image: 'https://picsum.photos/id/1042/600/400',
-    fullImage: 'https://picsum.photos/id/1042/1200/800',
-    description: '',
-    skills: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://portfolio-site.com'
-  },
-  {
-    category: 'web-development',
-    title: 'Portfolio Website',
-    image: 'https://picsum.photos/id/1060/600/400',
-    fullImage: 'https://picsum.photos/id/1060/1200/800',
-    description: 'This is my web development project, designed for a beauty center and recently updated with modifications made yesterday.The website is built using HTML, CSS, and Javascript to create an elegant and functional paltform for skincare and facial treatments',
-    skills: ['PHP', 'MySQL', 'Bootstrap'],
-    link: 'https://blogcms.com'
-  },
+  
+
   {
     category: 'web-design',
     title: 'Creative Agency Homepage',
@@ -158,18 +152,15 @@ const projects = [
     skills: ['Figma', 'Adobe XD'],
     link: 'https://agency-home.com'
   },
-  {
-    category: 'web-design',
-    title: 'Travel App UI Concept',
-    image: 'https://loremflickr.com/600/400/travel,app',
-    fullImage: 'https://loremflickr.com/1200/800/travel,app',
-    description: 'Crafted a concept UI for a travel booking app that enables users to search destinations, book hotels, and explore trip packages with ease. The design emphasizes vibrant imagery, intuitive navigation, and modular components to support scalability and future features.',
-    skills: ['Sketch', 'UI Design'],
-    link: 'https://travel-app-ui.com'
-  }
+
 ];
 
 
+
+// Function to resolve local image paths if they are not full URLs
+function resolveImagePath(imagePath) {
+  return imagePath.startsWith('http') ? imagePath : '/assets/projects' + imagePath;
+}
 
 const projectGrid = document.getElementById('projectGrid');
 const popup = document.getElementById('popup');
@@ -179,52 +170,52 @@ const popupDescription = document.getElementById('popup-description');
 const popupSkills = document.getElementById('popup-skills');
 const popupLink = document.getElementById('popup-link');
 const popupClose = document.getElementById('popup-close');
+const popupImgLink = document.getElementById('popup-img-link');
 
 function renderProjects(filter = 'all') {
-    projectGrid.innerHTML = '';
-    const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+  projectGrid.innerHTML = '';
+  const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
-    filtered.forEach(project => {
-        const card = document.createElement('div');
-        card.className = 'project-card';
-        card.innerHTML = `
-            <img src="${project.image}" alt="${project.title}">
-            <h3>${project.title}</h3>
-            
-        `;
-        card.addEventListener('click', () => openPopup(project));
-        projectGrid.appendChild(card);
-    });
+  filtered.forEach(project => {
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    card.innerHTML = `
+      <img src="${resolveImagePath(project.image)}" alt="${project.title}">
+      <h3>${project.title}</h3>
+    `;
+    card.addEventListener('click', () => openPopup(project));
+    projectGrid.appendChild(card);
+  });
 }
-{/* <p>${project.description}</p> */}
+
 function openPopup(project) {
   popupImg.src = project.fullImage;
   popupTitle.textContent = project.title;
   popupDescription.textContent = project.description;
   popupSkills.innerHTML = '';
-  
+
   project.skills.forEach(skill => {
-      const img = document.createElement('img');
-      img.src = skillIcons[skill] || 'https://via.placeholder.com/40'; // fallback
-      img.alt = skill;
-      img.title = skill;
-      img.className = 'skill-icon';
-      popupSkills.appendChild(img);
+    const img = document.createElement('img');
+    img.src = skillIcons[skill] || 'https://via.placeholder.com/40'; // fallback
+    img.alt = skill;
+    img.title = skill;
+    img.className = 'skill-icon';
+    popupSkills.appendChild(img);
   });
 
   popupLink.href = project.link;
   popup.classList.remove('hidden');
 }
+
 popupClose.addEventListener('click', () => {
   popup.classList.add('hidden');
 });
 
-
 // Filter Buttons
 document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        renderProjects(btn.dataset.filter);
-    });
+  btn.addEventListener('click', () => {
+    renderProjects(btn.dataset.filter);
+  });
 });
 
 renderProjects(); // initial load
@@ -233,3 +224,4 @@ document.querySelector(".hamburger").addEventListener("click", () => {
   const navItem = document.querySelector("#nav-item");
   navItem.classList.toggle("active");
 });
+renderProjects(); // initial load
