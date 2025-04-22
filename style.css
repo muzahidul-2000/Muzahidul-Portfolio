@@ -1088,10 +1088,7 @@ footer {
   color: var(--ternary-color);
 }
 
-.about-section,
-.custom-shape-divider-bottom-1744720210 .shape-fill {
-  display: none;
-}
+
 
 
 
@@ -1105,127 +1102,6 @@ footer {
   /* Invert image for dark mode */
 }
 
-
-/* Mobile responsive styling */
-@media (max-width: 768px) {
-  #nav-item {
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #161b22;
-    width: 100%;
-    padding: 20px 0;
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    z-index: 10;
-  }
-
-  .nav-btn {
-    margin-top: 10px;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  #nav-item.active {
-    transform: translateY(0%);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .section-1 {
-    display: flex;
-    flex-direction: column-reverse;
-    /* height: 66vh; */
-  }
-
-  .sec1-left {
-    text-align: center;
-  }
-
-  .social-links {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  .sec1-left h1 {
-    font-size: 2.2rem;
-  }
-
-  .sec1-right {
-    padding: 32px 32px 0px 32px;
-  }
-
-  .sec1-right img {
-    height: 66%;
-    width: 100%;
-  }
-
-
-
-  #projects {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #popup {
-    padding: 1rem;
-    align-items: flex-start;
-  }
-
-  /* Popup content box */
-  #popup .popup-content {
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: none;
-  }
-
-  /* Popup image */
-  #popup .popup-left img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  /* Popup right content */
-  #popup .popup-right {
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-
-  /* Title size */
-  #popup .popup-right h2 {
-    font-size: 1.5rem;
-  }
-
-  /* Description text */
-  #popup .popup-right p {
-    font-size: 1rem;
-  }
-
-  /* Buttons */
-  #popup .popup-right .preview-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem;
-  }
-
-  /* Skills icons */
-  #popup .popup-skills .skill-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-}
 
 /* for small devices */
 @media only screen and (max-width: 480px) {
