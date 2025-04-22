@@ -98,7 +98,7 @@ const projects = [
   {
     category: 'web-development',
     title: 'Beauty Center Website',
-    image: 'projects/images/parlourHome.jpg',
+    image: 'https://picsum.photos/id/1015/1200/800',
     fullImage: 'https://picsum.photos/id/1015/1200/800',
     description: 'My first web development project — a responsive and elegant website for a beauty center — showcases a clean layout tailored for skincare and facial treatment services. Recently enhanced with UI improvements and functional updates, the website is built using HTML, CSS, and JavaScript, focusing on smooth user experience and mobile responsiveness.',
     skills: ['React', 'Node.js', 'Express'],
