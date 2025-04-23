@@ -1088,10 +1088,10 @@ footer {
   color: var(--ternary-color);
 }
 
-.about-section,
+/* .about-section,
 .custom-shape-divider-bottom-1744720210 .shape-fill {
   display: none;
-}
+} */
 
 
 
@@ -1176,6 +1176,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
+
   #popup {
     padding: 1rem;
     align-items: flex-start;
@@ -1247,7 +1248,7 @@ footer {
   #projects {
     padding: 2rem 0rem;
   }
-  
+
   .project-nav .nav-btn {
     padding: 0.7rem 0.7rem;
     font-size: 0.65rem;
@@ -1306,4 +1307,89 @@ footer {
     width: 30px;
     height: 30px;
   }
+
+  /* project-section-responsive */
+  .project-grid {
+    /* Force 2 columns on very small screens */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    /* Even smaller gap */
+    padding: 0.4rem;
+    /* Even smaller padding */
+  }
+
+  .project-card {
+    border-radius: 4px;
+    /* Even smaller card border-radius */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    /* Even more subtle shadow */
+  }
+
+  #projects {
+    padding: 0.8rem 0.2rem;
+    /* Further reduced horizontal padding */
+    margin: 0vw 0.2vw;
+    /* Further reduced horizontal margin */
+    margin-bottom: 2rem;
+    /* Further reduced bottom margin */
+  }
+
+  .project-section h1 {
+    font-size: 1.1rem;
+    /* Even smaller heading */
+    margin-bottom: 0.4rem;
+    /* Adjusted margin */
+  }
+
+  .project-section .project-para {
+    font-size: 0.6rem;
+    /* Even smaller paragraph text */
+  }
+
+  .project-nav {
+    gap: 0.1rem;
+    /* Even smaller gap between buttons */
+    padding: 0.3rem 0.5rem;
+    /* Further reduced padding */
+    border-radius: 0.4rem;
+    /* Even smaller border-radius */
+  }
+
+  .project-nav .nav-btn {
+    font-size: 0.4rem;
+    /* Even smaller button font size */
+    padding: 0.2rem 0.4rem;
+    /* Further reduced button padding */
+    border-width: 0.8px;
+    /* Even thinner border */
+  }
+
+  .project-card img {
+    height: 70px;
+    /* Even smaller image height */
+  }
+
+  .project-card h3 {
+    font-size: 0.65rem;
+    /* Even smaller card heading */
+    padding: 0.3rem 0.4rem 0;
+    /* Adjusted padding */
+  }
+
+  .project-card p {
+    font-size: 0.5rem;
+    /* Even smaller card paragraph text */
+    padding: 0.2rem 0.4rem 0.4rem;
+    /* Adjusted padding */
+  }
+
+  .project-card .badge {
+    font-size: 0.35rem;
+    /* Even smaller badge font size */
+    padding: 0.08rem 0.2rem;
+    /* Even smaller badge padding */
+    margin: 0.03rem;
+    /* Even smaller badge margin */
+  }
 }
+
