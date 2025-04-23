@@ -102,7 +102,7 @@ const projects = [
     fullImage: 'https://picsum.photos/id/1015/1200/800',
     description: 'My first web development project — a responsive and elegant website for a beauty center — showcases a clean layout tailored for skincare and facial treatment services. Recently enhanced with UI improvements and functional updates, the website is built using HTML, CSS, and JavaScript, focusing on smooth user experience and mobile responsiveness.',
     skills: ['React', 'Node.js', 'Express'],
-    link: 'https://live-site-link.com'
+    link: 'https://noorislam-51.github.io/Beauty-Parlour/'
   },
 
   {
@@ -111,8 +111,8 @@ const projects = [
     image: 'https://picsum.photos/id/1020/600/400',
     fullImage: 'https://picsum.photos/id/1020/1200/800',
     description: 'Café Crust is a sleek and interactive website I recently developed for a fictional café using React.js. This project highlights modular design principles and leverages dynamic rendering through arrays to showcase menu items and bakery products. With a focus on modern UI/UX, the site delivers a smooth browsing experience, reflecting both aesthetic appeal and functional responsiveness.',
-    skills: ['JavaScript', 'API', 'HTML', 'CSS'],
-    link: 'https://weather-app.com'
+    skills: ['JavaScript', 'React', 'HTML', 'CSS'],
+    link: 'https://cafecrust.netlify.app'
   },
   {
     category: 'web-development',
@@ -121,36 +121,36 @@ const projects = [
     fullImage: 'https://picsum.photos/id/1042/1200/800',
     description: 'Designed and developed a dynamic website for a Digital Technology Agency, focusing on a clean, modern design with a structured layout. The website showcases key information in a user-friendly manner, reflecting the agency’s professionalism and brand identity. With a focus on simplicity and impact, the design ensures easy navigation while maintaining a sleek and professional aesthetic. This project highlights my ability to create effective, responsive websites tailored to client needs.',
     skills: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://portfolio-site.com'
+    link: 'https://noorislam-51.github.io/Digital-Technology-Agency/'
   },
   {
     category: 'web-design',
-    title: 'Digital Technology Agency',
+    title: 'Travel Landing Page',
     image: 'https://loremflickr.com/600/400/website,design',
     fullImage: 'https://loremflickr.com/1200/800/website,design',
     description: 'This project focuses on delivering a clean design and structured layout to highlight essential information effectively. its a simple yet impactful design that reflects professsionalism.Looking forward to your feedbackand suggestions!',
     skills: ['Figma', 'UI/UX'],
-    link: 'https://design-link.com'
+    link: 'https://cdn.dribbble.com/userupload/16139771/file/original-2b8a7f77c58ec642087fb45c042f2dc2.png?resize=1504x5451&vertical=center'
   },
   {
     category: 'web-design',
-    title: 'Cafe Crust',
+    title: 'Fitness Motivating App',
     image: 'https://loremflickr.com/600/400/mobile,app',
     fullImage: 'https://loremflickr.com/1200/800/mobile,app',
     description: 'I recently built this sleek and interactive website for a fictinal cafe crust using react.js.This project emphasizes modularity and modern design while utilizing arrays to dynamically generate cards for menu items and bakery products.',
     skills: ['Adobe XD', 'Mobile UI'],
-    link: 'https://design-link.com'
+    link: 'https://cdn.dribbble.com/userupload/10391949/file/original-282b74e4e532dfe40f0a3b5b01800285.png?resize=1504x3633&vertical=center'
   },
   
 
   {
     category: 'web-design',
-    title: 'Creative Agency Homepage',
+    title: 'Trake - Activity Fitness Tracker ',
     image: 'https://loremflickr.com/600/400/agency,homepage',
     fullImage: 'https://loremflickr.com/1200/800/agency,homepage',
     description: 'Designed a visually striking homepage for a digital creative agency to reflect their brand identity. The design included layered illustrations, gradient overlays, interactive sliders, and consistent design tokens to maintain brand consistency across all components and devices.',
     skills: ['Figma', 'Adobe XD'],
-    link: 'https://agency-home.com'
+    link: 'https://cdn.dribbble.com/userupload/10972374/file/original-fda24fc194a25f4b0f447e4e5f2b3528.png?resize=640x1918&vertical=center'
   },
 
 ];
