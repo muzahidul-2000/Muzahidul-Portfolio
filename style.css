@@ -941,6 +941,7 @@ section p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   margin: 2rem 0;
   padding: 1rem 2rem;
@@ -951,11 +952,11 @@ section p {
 }
 
 /* Fixed the nested selector and removed conflicting rules */
-.nav-btn {
+/* .nav-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .project-nav .nav-btn {
   padding: 0.7rem 1.6rem;
