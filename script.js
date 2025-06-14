@@ -66,10 +66,10 @@ const skillIcons = {
 
 const projects = [
   {
-    title: "Weather App",
-    description: "A weather forecasting app that displays current conditions and 5-day forecasts using OpenWeatherMap API.",
+    title: "University Management System",
+    description: "The University Management System is a Java-based desktop app with MySQL backend to manage student/teacher records, attendance, exams, and fee payments. Built with Java 11, it uses mysql-connector-java-8.0.27.jar and rs2xml.jar. To run, set up the database using the provided SQL file, start the MySQL server, and launch Login.java (Username: admin, Password: admin).",
     image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvZ3xlbnwwfHwwfHx8MA%3D%3D",
-    skills: ["HTML", "CSS", "JavaScript", "API"]
+    skills: ["Java", "MySQL"]
   },
   {
     title: "Crypto Dashboard",
