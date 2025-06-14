@@ -122,3 +122,14 @@ closeModal.onclick = () => (modal.style.display = "none");
 window.onclick = (e) => {
   if (e.target == modal) modal.style.display = "none";
 };
+
+// Wait for the DOM to load
+  document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector(".hamburger");
+    const navItem = document.getElementById("nav-item");
+
+    // Toggle class on click
+    hamburger.addEventListener("click", function() {
+      navItem.classList.toggle("active");
+    });
+  });
