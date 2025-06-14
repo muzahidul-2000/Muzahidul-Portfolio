@@ -101,6 +101,7 @@ nav {
 #nav-item {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex: 2;
 }
 
@@ -138,7 +139,7 @@ nav {
 /* Button */
 .nav-btn {
   margin-left: 40%;
-  display: inline-block;
+  display: flex;
   justify-content: right;
 }
 
@@ -978,6 +979,11 @@ footer {
     z-index: 10;
   }
 
+  .about-content{
+    display: flex;
+    flex-direction: column;
+  }
+
   .nav-btn {
     margin-top: 10px;
   }
@@ -1084,9 +1090,18 @@ footer {
 
 /* for small devices */
 @media only screen and (max-width: 480px) {
+
+  nav{
+    padding: 1rem 50px;
+  }
+
   .section-1 {
     height: 100vh;
     padding: 0px 2px 0px 0px;
+  }
+
+  .sec1-left p{
+    font-size: 1rem;
   }
 
   .sec1-right img {
@@ -1096,7 +1111,19 @@ footer {
 
   .sec1-left h1,
   .project-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-info h2 {
     font-size: 2rem;
+  }
+
+  .portfolio-header h2, .contact-header h2{
+    font-size: 25px;
+  }
+
+  .about-description {
+    font-size: 1rem;
   }
 
   #projects {
