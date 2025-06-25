@@ -445,6 +445,8 @@ section p {
   display: inline-block;
 }
 
+/* 
+
 .skills-section {
   margin-top: 30px;
 }
@@ -471,7 +473,7 @@ section p {
 .skills-grid img:hover {
   transform: scale(1.1);
 }
-
+ */
 .resume-btn {
   display: inline-block;
   padding: 12px 30px;
@@ -489,6 +491,145 @@ section p {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
 }
+.skills-section {
+  margin: 5% 0%;
+  padding: 30px 3%;
+  background: #f0f4f8;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Grid for 2-row layout (4 boxes per row on desktop) */
+.skills-container {
+  max-width: 95%;
+  padding: 3%;
+  background: linear-gradient(120deg, var(--primary-color, #0f172a), #1e293b);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 2 rows when combined with child flex-wrap */
+  gap: 20px;
+}
+
+/* Individual skill box */
+.skill-category {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #222;
+  text-align: center;
+  border-bottom: 2px solid #e0e6ed;
+  padding-bottom: 8px;
+}
+
+/* Grid of individual tech items inside a box */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+/* Tech item */
+.skill-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-item:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.skill-item i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover i {
+  transform: scale(1.1);
+}
+
+.skill-item span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  line-height: 1.2;
+}
+
+/* Optional custom colors (if not using devicon's default colored icons) */
+.colored-icon { color: black; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .skill-item {
+    gap: 8px;
+    padding: 6px;
+  }
+
+  .skill-item i {
+    font-size: 1.2rem;
+  }
+
+  .skill-item span {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 20px 2%;
+  }
+
+  .skills-title {
+    font-size: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 /* Main Projects Section Container */
 .portfolio-section {
@@ -559,7 +700,7 @@ section p {
 }
 
 .project-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: var(--secondary-color);
 }
@@ -568,66 +709,6 @@ section p {
   font-size: 0.95rem;
   color: #cbd5e1;
   margin-bottom: 1rem;
-}
-
-/* Modal */
-.modal {
-  display: block;
-  position: fixed;
-  z-index: 9999;
-  padding: 60px 20px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  padding: 2rem;
-  border-radius: 16px;
-  width: 70vw;
-  max-width: none;
-  text-align: left;
-  position: relative;
-  color: #1f2937;
-}
-
-.modal-content img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-  margin: 1rem 0;
-  border-radius: 10px;
-}
-
-.modal-content h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.8rem;
-}
-
-.modal-content p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #374151;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tags span {
-  background-color: #2563eb;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.85rem;
 }
 
 .portfolio-header {
@@ -640,7 +721,117 @@ section p {
 
 .portfolio-header h2 {
   font-size: 32px;
+  color: black;
 }
+.project-modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+}
+
+.project-modal-overlay.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.project-modal-content {
+  width: 80%;
+  max-width: 1000px;
+  background: #fff;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.project-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Left Image */
+.project-modal-left {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+.project-modal-left img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Right Text */
+.project-modal-right {
+  flex: 1.2;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.project-modal-right h3 {
+  font-size: 1.6rem;
+  color: #222;
+}
+.project-modal-right p {
+  font-size: 1rem;
+  color: #080808;
+  line-height: 1.5;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.skill-tags span {
+  background: #000000;
+  padding: 0.4rem 0.7rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+
+.project-github-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.project-github-btn:hover {
+  background-color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-modal-content {
+    flex-direction: column;
+    width: 95%;
+  }
+}
+
+
+
 
 /* Contact Section */
 #contact {
@@ -775,30 +966,111 @@ section p {
   box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
 }
 
-.modal {
+/* Overlay */
+.contact-modal-overlay {
   display: none;
   position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
 
-.modal.show {
+.contact-modal-overlay.show {
   display: flex;
-  animation: fadeIn 0.3s ease;
+  animation: contactFadeIn 0.3s ease;
+}
+
+/* Modal Box */
+.contact-modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Close Button */
+.contact-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Heading */
+.contact-modal-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+/* Form Elements */
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  background-color: #fff;
+}
+
+#contactForm button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation */
+@keyframes contactFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contact-modal-content {
+    padding: 1.5rem;
+  }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -820,6 +1092,7 @@ section p {
     transform: translateY(30px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -980,7 +1253,7 @@ footer {
     z-index: 10;
   }
 
-  .about-content{
+  .about-content {
     display: flex;
     flex-direction: column;
   }
@@ -1092,11 +1365,11 @@ footer {
 /* for small devices */
 @media only screen and (max-width: 480px) {
 
-  nav{
+  nav {
     padding: 1rem 50px;
   }
 
-  .project-card{
+  .project-card {
     width: auto;
   }
 
@@ -1105,7 +1378,7 @@ footer {
     padding: 0px 2px 0px 0px;
   }
 
-  .sec1-left p{
+  .sec1-left p {
     font-size: 1rem;
   }
 
@@ -1123,7 +1396,8 @@ footer {
     font-size: 2rem;
   }
 
-  .portfolio-header h2, .contact-header h2{
+  .portfolio-header h2,
+  .contact-header h2 {
     font-size: 25px;
   }
 
@@ -1286,7 +1560,8 @@ footer {
 @media (max-width: 768px) {
   #nav-item {
     position: absolute;
-    top: 80px; /* adjust based on your nav height */
+    top: 80px;
+    /* adjust based on your nav height */
     right: 0;
     background: rgba(15, 23, 42, 0.95);
     width: 100%;
@@ -1298,7 +1573,8 @@ footer {
   }
 
   #nav-item.active {
-    max-height: 500px; /* enough to show all links */
+    max-height: 500px;
+    /* enough to show all links */
   }
 
   #nav-item a {
