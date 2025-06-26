@@ -200,7 +200,7 @@ nav {
 /* Left Section with Text */
 .sec1-left {
   flex: 1;
- /* max-width: 450px; */
+  /* max-width: 450px; */
   margin: 0 20px;
   text-align: left;
   position: relative;
@@ -471,6 +471,7 @@ section p {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
 }
+
 .skills-section {
   margin: 5% 0%;
   padding: 30px 3%;
@@ -492,7 +493,8 @@ section p {
   background: linear-gradient(120deg, var(--primary-color, #0f172a), #1e293b);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 2 rows when combined with child flex-wrap */
+  grid-template-columns: repeat(4, 1fr);
+  /* 2 rows when combined with child flex-wrap */
   gap: 20px;
 }
 
@@ -513,7 +515,7 @@ section p {
 .category-title {
   font-size: 1.1rem;
   margin-bottom: 12px;
-  color: #222;
+  color: #764ba2;
   text-align: center;
   border-bottom: 2px solid #e0e6ed;
   padding-bottom: 8px;
@@ -562,51 +564,8 @@ section p {
 }
 
 /* Optional custom colors (if not using devicon's default colored icons) */
-.colored-icon { color: black; }
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .skills-container {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .skill-item {
-    gap: 8px;
-    padding: 6px;
-  }
-
-  .skill-item i {
-    font-size: 1.2rem;
-  }
-
-  .skill-item span {
-    font-size: 0.68rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-section {
-    padding: 20px 2%;
-  }
-
-  .skills-title {
-    font-size: 1.5rem;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+.colored-icon {
+  color: rgb(0, 0, 0);
 }
 
 
@@ -703,6 +662,7 @@ section p {
   font-size: 32px;
   color: rgb(255, 255, 255);
 }
+
 .project-modal-overlay {
   display: none;
   position: fixed;
@@ -753,6 +713,7 @@ section p {
   justify-content: center;
   background: #f5f5f5;
 }
+
 .project-modal-left img {
   max-width: 100%;
   border-radius: 8px;
@@ -767,10 +728,12 @@ section p {
   justify-content: center;
   gap: 1rem;
 }
+
 .project-modal-right h3 {
   font-size: 1.6rem;
   color: #222;
 }
+
 .project-modal-right p {
   font-size: 1rem;
   color: #080808;
@@ -782,8 +745,10 @@ section p {
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
 .skill-tags span {
-  background: #000000;
+  background: #810072;
+  /* light red */
   padding: 0.4rem 0.7rem;
   border-radius: 5px;
   font-size: 0.85rem;
@@ -791,24 +756,19 @@ section p {
 
 .project-github-btn {
   display: inline-block;
-  background: #000;
+  background: #970375;
   color: #fff;
   padding: 0.6rem 1rem;
   border-radius: 6px;
+  width: auto;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
+
 .project-github-btn:hover {
-  background-color: #333;
+  background-color: #39043c;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .project-modal-content {
-    flex-direction: column;
-    width: 95%;
-  }
-}
 
 
 
@@ -1035,16 +995,18 @@ section p {
 
 /* Animation */
 @keyframes contactFadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .contact-modal-content {
-    padding: 1.5rem;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
+
+
 
 @keyframes fadeIn {
   from {
@@ -1215,47 +1177,46 @@ footer {
 
 
 
-/* Mobile responsive styling */
-@media (max-width: 768px) {
-  #nav-item {
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #161b22;
-    width: 100%;
-    padding: 20px 0;
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    z-index: 10;
+
+
+
+/* ============================================
+   Media Query: Mobile Devices (≤ 480px)
+============================================ */
+@media only screen and (max-width: 480px) {
+  nav {
+    padding: 1rem 50px;
   }
 
-  .about-content {
-    display: flex;
-    flex-direction: column;
+  .skills-section {
+    padding: 20px 2%;
   }
 
-  .nav-btn {
-    margin-top: 10px;
+  .skills-title {
+    font-size: 1.5rem;
   }
 
-  .hamburger {
-    display: block;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
-  #nav-item.active {
-    transform: translateY(0%);
-    opacity: 1;
-    pointer-events: auto;
+  .contact-modal-content {
+    padding: 1.5rem;
   }
 
-  .section-1 {
-    display: flex;
-    flex-direction: column-reverse;
-    /* height: 66vh; */
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .project-card {
+    width: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .sec1-right {
+    display: none;
   }
 
   .sec1-left {
@@ -1263,108 +1224,10 @@ footer {
   }
 
   .social-links {
-    text-align: center;
+
     display: flex;
-    justify-content: center;
-  }
-
-  .sec1-left h1 {
-    font-size: 2.2rem;
-  }
-
-  .sec1-right {
-    padding: 32px 32px 0px 32px;
-  }
-
-  .sec1-right img {
-    height: 66%;
-    width: 100%;
-  }
-
-
-
-  #projects {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  #popup {
-    padding: 1rem;
-    align-items: flex-start;
-  }
-
-  /* Popup content box */
-  #popup .popup-content {
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: none;
-  }
-
-  /* Popup image */
-  #popup .popup-left img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  /* Popup right content */
-  #popup .popup-right {
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-
-  /* Title size */
-  #popup .popup-right h2 {
-    font-size: 1.5rem;
-  }
-
-  /* Description text */
-  #popup .popup-right p {
-    font-size: 1rem;
-  }
-
-  /* Buttons */
-  #popup .popup-right .preview-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem;
-  }
-
-  /* Skills icons */
-  #popup .popup-skills .skill-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-}
-
-/* for small devices */
-@media only screen and (max-width: 480px) {
-
-  nav {
-    padding: 1rem 50px;
-  }
-
-  .project-card {
-    width: auto;
-  }
-
-  .section-1 {
-    height: 100vh;
-    padding: 0px 2px 0px 0px;
-  }
-
-  .sec1-left p {
-    font-size: 1rem;
-  }
-
-  .sec1-right img {
-    height: 60%;
-    width: 100%;
   }
 
   .sec1-left h1,
@@ -1372,32 +1235,106 @@ footer {
     font-size: 1.5rem;
   }
 
-  .about-info h2 {
-    font-size: 2rem;
+  .sec1-left p {
+    font-size: 1rem;
   }
 
-  .portfolio-header h2,
-  .contact-header h2 {
-    font-size: 25px;
+  .sec1-right {
+    padding: 32px;
+  }
 
+  .sec1-right img {
+    height: 60%;
+    width: 100%;
+  }
+
+  .about-info h2 {
+    font-size: 2rem;
   }
 
   .about-description {
     font-size: 1rem;
   }
 
-  #projects {
-    padding: 2rem 0rem;
+  .portfolio-header h2,
+  .contact-header h2 {
+    font-size: 25px;
   }
 
-  .project-nav .nav-btn {
-    padding: 0.7rem 0.7rem;
-    font-size: 0.65rem;
+  #projects {
+    padding: 0.8rem 0.2rem;
+    margin: 0 0.2vw 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* One column — one card per line */
+    gap: 1rem;
+    padding: 1rem;
+
+  }
+
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack each card vertically */
+    gap: 1rem;
+    /* Optional spacing between cards */
+    padding: 1rem;
+    align-items: center;
+    /* Optional: center cards horizontally */
+  }
+
+  .project-card {
+    width: 100%;
+
+  }
+
+  .project-card img {
+    height: 170px;
   }
 
   .project-nav {
     display: flex;
-    flex-wrap: inherit;
+    flex-wrap: wrap;
+    gap: 0.1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.4rem;
+  }
+
+  .project-nav .nav-btn {
+    font-size: 0.4rem;
+    padding: 0.2rem 0.4rem;
+    border-width: 0.8px;
+  }
+
+
+
+  .project-card h3 {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.4rem 0;
+  }
+
+  .project-card p {
+    font-size: 0.5rem;
+    padding: 0.2rem 0.4rem 0.4rem;
+  }
+
+  .project-card .badge {
+    font-size: 0.35rem;
+    padding: 0.08rem 0.2rem;
+    margin: 0.03rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   #popup {
@@ -1405,7 +1342,6 @@ footer {
     align-items: flex-start;
   }
 
-  /* Popup content box */
   #popup .popup-content {
     flex-direction: column;
     width: 100%;
@@ -1414,148 +1350,174 @@ footer {
     max-width: none;
   }
 
-  /* Popup image */
   #popup .popup-left img {
     width: 100%;
     height: auto;
     border-radius: 8px;
   }
 
-  /* Popup right content */
   #popup .popup-right {
     margin-left: 0;
     margin-top: 1rem;
   }
 
-  /* Title size */
   #popup .popup-right h2 {
     font-size: 1.5rem;
   }
 
-  /* Description text */
   #popup .popup-right p {
     font-size: 1rem;
   }
 
-  /* Buttons */
   #popup .popup-right .preview-btn {
     font-size: 0.9rem;
     padding: 0.6rem;
   }
 
-  /* Skills icons */
+  #popup .popup-skills .skill-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+/* ============================================
+   Media Query: Tablets & Small Screens (≤ 768px)
+============================================ */
+@media (max-width: 768px) {
+
+  /* 
+  .project-modal-content {
+    flex-direction: column;
+    width: 95%;
+  } */
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .skill-item {
+    gap: 8px;
+    padding: 6px;
+  }
+
+  .skill-item i {
+    font-size: 1.2rem;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+
+
+  /* .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0%;
+  } */
+  .skill-item span {
+    font-size: 0.68rem;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: row;
+    /* max-width: auto; */
+  }
+
+
+
+  .sec1-left h1 {
+    font-size: 2.2rem;
+  }
+
+
+  .sec1-right {
+    padding: 32px 32px 0 32px;
+  }
+
+  .sec1-right img {
+    height: 66%;
+    width: 100%;
+  }
+
+  .sec1-left p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+
+  }
+
+  #popup {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  #popup .popup-content {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: none;
+  }
+
+  #popup .popup-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  #popup .popup-right {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  #popup .popup-right h2 {
+    font-size: 1.5rem;
+  }
+
+  #popup .popup-right p {
+    font-size: 1rem;
+  }
+
+  #popup .popup-right .preview-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
   #popup .popup-skills .skill-icon {
     width: 30px;
     height: 30px;
   }
 
-  /* project-section-responsive */
-  .project-grid {
-    /* Force 2 columns on very small screens */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.4rem;
-    /* Even smaller gap */
-    padding: 0.4rem;
-    /* Even smaller padding */
+  /* Navigation */
+  .hamburger {
+    display: block;
   }
 
-  .project-card {
-    border-radius: 4px;
-    /* Even smaller card border-radius */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-    /* Even more subtle shadow */
-  }
-
-  #projects {
-    padding: 0.8rem 0.2rem;
-    /* Further reduced horizontal padding */
-    margin: 0vw 0.2vw;
-    /* Further reduced horizontal margin */
-    margin-bottom: 2rem;
-    /* Further reduced bottom margin */
-  }
-
-  .project-section h1 {
-    font-size: 1.1rem;
-    /* Even smaller heading */
-    margin-bottom: 0.4rem;
-    /* Adjusted margin */
-  }
-
-  .project-section .project-para {
-    font-size: 0.6rem;
-    /* Even smaller paragraph text */
-  }
-
-  .project-nav {
-    gap: 0.1rem;
-    /* Even smaller gap between buttons */
-    padding: 0.3rem 0.5rem;
-    /* Further reduced padding */
-    border-radius: 0.4rem;
-    /* Even smaller border-radius */
-  }
-
-  .project-nav .nav-btn {
-    font-size: 0.4rem;
-    /* Even smaller button font size */
-    padding: 0.2rem 0.4rem;
-    /* Further reduced button padding */
-    border-width: 0.8px;
-    /* Even thinner border */
-  }
-
-  .project-card img {
-    height: 70px;
-    /* Even smaller image height */
-  }
-
-  .project-card h3 {
-    font-size: 0.65rem;
-    /* Even smaller card heading */
-    padding: 0.3rem 0.4rem 0;
-    /* Adjusted padding */
-  }
-
-  .project-card p {
-    font-size: 0.5rem;
-    /* Even smaller card paragraph text */
-    padding: 0.2rem 0.4rem 0.4rem;
-    /* Adjusted padding */
-  }
-
-  .project-card .badge {
-    font-size: 0.35rem;
-    /* Even smaller badge font size */
-    padding: 0.08rem 0.2rem;
-    /* Even smaller badge padding */
-    margin: 0.03rem;
-    /* Even smaller badge margin */
-  }
-}
-
-
-/* hamburger */
-
-/* Responsive: show hamburger & hide nav items */
-@media (max-width: 768px) {
   #nav-item {
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 80px;
-    /* adjust based on your nav height */
     right: 0;
     background: rgba(15, 23, 42, 0.95);
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    flex-direction: column;
-    align-items: center;
     transition: max-height 0.3s ease;
+    z-index: 10;
   }
 
   #nav-item.active {
     max-height: 500px;
-    /* enough to show all links */
   }
 
   #nav-item a {
@@ -1563,12 +1525,8 @@ footer {
   }
 
   .nav-btn {
-    margin-left: 0;
     margin-top: 1rem;
+    margin-left: 0;
     justify-content: center;
-  }
-
-  .hamburger {
-    display: block;
   }
 }

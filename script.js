@@ -24,15 +24,16 @@ const skillIcons = {
   'HTML': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
   'CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
   'Figma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
-  'UI/UX': 'https://cdn-icons-png.flaticon.com/512/1055/1055687.png',
   'Adobe XD': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg',
-  'Mobile UI': 'https://cdn-icons-png.flaticon.com/512/1828/1828919.png',
   'PHP': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
   'Bootstrap': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
   'Sketch': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg',
-  'UI Design': 'https://cdn-icons-png.flaticon.com/512/1828/1828970.png',
-  'Pandas': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
+  'Pandas': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
+  
+  'API': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg',
+  'Java': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'
 };
+
 
 const projects = [
   {
